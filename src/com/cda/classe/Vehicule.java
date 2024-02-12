@@ -55,9 +55,9 @@ public class Vehicule {
 
     public String plusRapide(Vehicule comparaison){
         if (this.vitesse > comparaison.vitesse){
-            return this.nom;
+            return this.nom + " et sa vitesse " + this.vitesse;
         } else if (this.vitesse < comparaison.vitesse) {
-            return comparaison.nom;
+            return comparaison.nom + " et sa vitesse " + comparaison.vitesse;
         }else {
             return "error";
         }

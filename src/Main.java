@@ -45,9 +45,10 @@ public class Main {
         System.out.println("Le véhicule : " + camion.getNom() + " possède une vitesse de : " + camion.getVitesse() + "k/h");
 
         //Exercice 4
-        System.out.println("Le véhicule le plus rapide est " + tracteur.plusRapide(velo) + " et sa vitesse " );
-        System.out.println("Le véhicule le plus rapide est " + velo.plusRapide(camion) + " et sa vitesse ");
-        System.out.println("Le véhicule le plus rapide est " + camion.plusRapide(tracteur) + " et sa vitesse ");
+        System.out.println("Le véhicule le plus rapide est " + tracteur.plusRapide(velo));
+        System.out.println("Le véhicule le plus rapide est " + velo.plusRapide(camion));
+        System.out.println("Le véhicule le plus rapide est " + camion.plusRapide(tracteur));
+
 
     }
 }
