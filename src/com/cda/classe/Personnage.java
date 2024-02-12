@@ -1,14 +1,19 @@
 package com.cda.classe;
 
 public class Personnage {
-    private String nom;
-    private int vie;
-    private int attaque;
-    private int defense;
+    protected String nom;
+    protected int vie;
+    protected int attaque;
+    protected int defense;
 
     //CONSTRUCTEUR
     public Personnage(){};
-    public Personnage(String nom, int vie, int attaque, int defense){};
+    public Personnage(String nom, int vie, int attaque, int defense){
+        this.nom = nom;
+        this.vie = vie;
+        this.attaque = attaque;
+        this.defense = defense;
+    };
 
     //GETTER ET SETTER
     public String getNom() {
@@ -44,7 +49,8 @@ public class Personnage {
     }
 
     //METHODE
-    public int attaquer(Personnage cible){
-        return cible.vie - (this.attaque - cible.defense);
+    public void attaquer(Personnage cible){
+        int hint = this.attaque - cible.defense;
+        cible.setVie(cible.vie - hint);
     }
 }

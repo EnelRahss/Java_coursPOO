@@ -1,6 +1,4 @@
-import com.cda.classe.Exemple;
-import com.cda.classe.Habitation;
-import com.cda.classe.Vehicule;
+import com.cda.classe.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -28,26 +26,31 @@ public class Main {
 //        System.out.println("L'habitation : " + immeuble.getNom() + " a une surface de : " + immeuble.surface() + "m².");
 //
             //Exercice 3
-        Vehicule tracteur = new Vehicule("tracteur", 4, 50);
-        Vehicule velo = new Vehicule("bicyclette", 2, 15);
-        Vehicule camion = new Vehicule("kamtar", 6,90);
+//        Vehicule tracteur = new Vehicule("tracteur", 4, 50);
+//        Vehicule velo = new Vehicule("bicyclette", 2, 15);
+//        Vehicule camion = new Vehicule("kamtar", 6,90);
+//
+//        System.out.println("Le véhicule : " + tracteur.getNom() + " est de type " + tracteur.detect());
+//        System.out.println("Le véhicule : " + velo.getNom() + "  est de type " + velo.detect());
+//        System.out.println("Le véhicule : " + camion.getNom() + "  est de type " + camion.detect());
+//
+//        tracteur.boost();
+//        velo.boost();
+//        camion.boost();
+//
+//        System.out.println("Le véhicule : " + tracteur.getNom() + " possède une vitesse de : " + tracteur.getVitesse() + "k/h");
+//        System.out.println("Le véhicule : " + velo.getNom() + " possède une vitesse de : " + velo.getVitesse() + "k/h");
+//        System.out.println("Le véhicule : " + camion.getNom() + " possède une vitesse de : " + camion.getVitesse() + "k/h");
+//
+//        //Exercice 4
+//        System.out.println("Le véhicule le plus rapide est " + tracteur.plusRapide(velo));
+//        System.out.println("Le véhicule le plus rapide est " + velo.plusRapide(camion));
+//        System.out.println("Le véhicule le plus rapide est " + camion.plusRapide(tracteur));
 
-        System.out.println("Le véhicule : " + tracteur.getNom() + " est de type " + tracteur.detect());
-        System.out.println("Le véhicule : " + velo.getNom() + "  est de type " + velo.detect());
-        System.out.println("Le véhicule : " + camion.getNom() + "  est de type " + camion.detect());
-
-        tracteur.boost();
-        velo.boost();
-        camion.boost();
-
-        System.out.println("Le véhicule : " + tracteur.getNom() + " possède une vitesse de : " + tracteur.getVitesse() + "k/h");
-        System.out.println("Le véhicule : " + velo.getNom() + " possède une vitesse de : " + velo.getVitesse() + "k/h");
-        System.out.println("Le véhicule : " + camion.getNom() + " possède une vitesse de : " + camion.getVitesse() + "k/h");
-
-        //Exercice 4
-        System.out.println("Le véhicule le plus rapide est " + tracteur.plusRapide(velo));
-        System.out.println("Le véhicule le plus rapide est " + velo.plusRapide(camion));
-        System.out.println("Le véhicule le plus rapide est " + camion.plusRapide(tracteur));
+        Personnage patrick = new Personnage("Patrick le bg", 50, 5,0);
+        Personnage maeva = new Personnage("Maeva la rebelle", 40,10,0);
+        Partie partie1 = new Partie(patrick, maeva,3);
+        partie1.lancerPartie();
 
 
     }

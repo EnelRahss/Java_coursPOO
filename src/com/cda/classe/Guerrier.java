@@ -1,11 +1,13 @@
 package com.cda.classe;
 
-public class Assassin extends Personnage{
-    private int bonusAttaque;
-    public Assassin(String nom, int vie, int attaque, int defense, int bonusAttaque){
+public class Guerrier extends Personnage {
+    private int bonusDefense;
+    public Guerrier(String nom, int vie, int attaque, int defense, int bonusDefense){
         super(nom, vie, attaque, defense);
-        this.bonusAttaque = bonusAttaque;
+        this.bonusDefense = bonusDefense;
     }
+
+    //GETTER ET SETTER
     public String getNom() {
         return nom;
     }
@@ -37,20 +39,20 @@ public class Assassin extends Personnage{
     public void setDefense(int defense) {
         this.defense = defense;
     }
-    public int getBonusAttaque() {
-        return bonusAttaque;
+
+    public int getBonusDefense() {
+        return bonusDefense;
     }
 
-    public void setBonusAttaque(int bonusAttaque) {
-        this.bonusAttaque = bonusAttaque;
+    public void setBonusDefense(int bonusDefense) {
+        this.bonusDefense = bonusDefense;
     }
-    //METHODE
-    public void attaquer(Personnage cible){
+    public int attaquer(Personnage cible){
         double chance = Math.random()*100;
         if (chance <=5){
-            return cible.vie - (this.attaque + this.bonusAttaque - cible.defense);
-        }else {
+            this.vie += bonusDefense;
+        }
             return cible.vie - (this.attaque - cible.defense);
         }
     }
-}
+
