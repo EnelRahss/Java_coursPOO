@@ -38,11 +38,13 @@ public class Assassin extends Personnage{
         this.defense = defense;
     }
     public int getBonusAttaque() {
+
         return bonusAttaque;
     }
 
-    public void setBonusAttaque(int bonusAttaque) {
-        this.bonusAttaque = bonusAttaque;
+    public void setBonusAttaque(int value) {
+
+        this.bonusAttaque = value;
     }
     //METHODE
     public void attaquer(Personnage cible){

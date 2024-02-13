@@ -1,4 +1,6 @@
 import com.cda.classe.*;
+import com.cda.interfaces.*;
+import com.cda.interfaces.Partie;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -47,16 +49,37 @@ public class Main {
 //        System.out.println("Le véhicule le plus rapide est " + velo.plusRapide(camion));
 //        System.out.println("Le véhicule le plus rapide est " + camion.plusRapide(tracteur));
 
-        Assassin patrick = new Assassin("Patrick le bg", 40, 20,10,40);
-        Guerrier maeva = new Guerrier("Maeva la rebelle", 50,20,8,10);
+//        Assassin patrick = new Assassin("Patrick le bg", 40, 20,10,40);
+//        Guerrier maeva = new Guerrier("Maeva la rebelle", 50,20,8,10);
+//
+//        Partie partie1 = new Partie(patrick, maeva,3);
+//        System.out.println(partie1.lancerPartie());
+//
+//        Guerrier eva = new Guerrier("Eva la forte", 30,17,10,10);
+//
+//        Partie partie2 = new Partie(eva, patrick,2);
+//        System.out.println(partie2.lancerPartie());
 
-        Partie partie1 = new Partie(patrick, maeva,3);
-        System.out.println(partie1.lancerPartie());
+        Batman batman = new Batman("Bruce Wayne", 50,10,30,20);
+        Superman superman = new Superman("Clark Kent", 30,30,10,0);
+        Flash flash = new Flash("Henry Allen", 10,20,30,0);
 
-        Guerrier eva = new Guerrier("Eva la forte", 30,17,10,10);
+        batman.attaquer(superman);
+        superman.attaquer(batman);
+        flash.attaquer(batman);
+        Partie round1 = new Partie(batman, superman, 2);
+        Partie round2 = new Partie(superman, batman, 2);
+        Partie round3 = new Partie(batman, flash, 2);
+        Partie round4 = new Partie(flash, batman, 2);
+        Partie round5 = new Partie(flash, superman, 2);
+        Partie round6 = new Partie(superman, flash, 2);
 
-        Partie partie2 = new Partie(eva, patrick,2);
-        System.out.println(partie2.lancerPartie());
+        System.out.println(round1.lancerPartie());
+        System.out.println(round2.lancerPartie());
+        System.out.println(round3.lancerPartie());
+        System.out.println(round4.lancerPartie());
+        System.out.println(round5.lancerPartie());
+        System.out.println(round6.lancerPartie());
 
 
     }
