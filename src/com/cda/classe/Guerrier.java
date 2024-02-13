@@ -2,7 +2,8 @@ package com.cda.classe;
 
 public class Guerrier extends Personnage {
     private int bonusDefense;
-    public Guerrier(String nom, int vie, int attaque, int defense, int bonusDefense){
+
+    public Guerrier(String nom, int vie, int attaque, int defense, int bonusDefense) {
         super(nom, vie, attaque, defense);
         this.bonusDefense = bonusDefense;
     }
@@ -47,12 +48,15 @@ public class Guerrier extends Personnage {
     public void setBonusDefense(int bonusDefense) {
         this.bonusDefense = bonusDefense;
     }
-    public int attaquer(Personnage cible){
-        double chance = Math.random()*100;
-        if (chance <=5){
-            this.vie += bonusDefense;
-        }
-            return cible.vie - (this.attaque - cible.defense);
+
+    public void attaquer(Personnage cible) {
+        double chance = Math.random() * 100;
+        if (chance <= 5) {
+            int hint = this.attaque + this.bonusDefense - cible.defense;
+            cible.setVie(cible.vie - hint);
+        } else {
+            int hint = this.attaque - cible.defense;
+            cible.setVie(cible.vie - hint);
         }
     }
-
+}

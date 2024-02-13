@@ -47,10 +47,16 @@ public class Main {
 //        System.out.println("Le véhicule le plus rapide est " + velo.plusRapide(camion));
 //        System.out.println("Le véhicule le plus rapide est " + camion.plusRapide(tracteur));
 
-        Personnage patrick = new Personnage("Patrick le bg", 50, 5,0);
-        Personnage maeva = new Personnage("Maeva la rebelle", 40,10,0);
+        Assassin patrick = new Assassin("Patrick le bg", 40, 20,10,40);
+        Guerrier maeva = new Guerrier("Maeva la rebelle", 50,20,8,10);
+
         Partie partie1 = new Partie(patrick, maeva,3);
-        partie1.lancerPartie();
+        System.out.println(partie1.lancerPartie());
+
+        Guerrier eva = new Guerrier("Eva la forte", 30,17,10,10);
+
+        Partie partie2 = new Partie(eva, patrick,2);
+        System.out.println(partie2.lancerPartie());
 
 
     }

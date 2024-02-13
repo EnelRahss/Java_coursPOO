@@ -47,10 +47,14 @@ public class Assassin extends Personnage{
     //METHODE
     public void attaquer(Personnage cible){
         double chance = Math.random()*100;
-        if (chance <=5){
-            return cible.vie - (this.attaque + this.bonusAttaque - cible.defense);
+        if (chance <=20){
+            int hint = this.attaque + this.bonusAttaque - cible.defense;
+            cible.setVie(cible.vie - hint);
         }else {
-            return cible.vie - (this.attaque - cible.defense);
+            int hint = this.attaque - cible.defense;
+            cible.setVie(cible.vie - hint);
         }
     }
 }
+//        int hint = this.attaque - cible.defense;
+//        cible.setVie(cible.vie - hint);
